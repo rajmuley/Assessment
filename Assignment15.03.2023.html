@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments(14.03.2023)</title>
+    <style>
+        button{
+            background-color: blue;
+            font-size: 24px;
+            color: white;
+            border: 0px;
+            padding: 1%;
+        }
+        button:hover{
+            background-color: red;
+            transition-duration: 2s;
+        }
+        div{
+            font-size: 24px;
+            padding: 2px;
+            padding-top: 2%;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="details"></h1>
+<div>
+    <div id="name"></div>
+    <div id="dob"></div>
+    <div id="bloodg"></div>
+    <div id="phone"></div>
+    <div id="mail"></div>
+</div>
+<br>
+<button id="let" onclick="let()" >For Deatils Click</button>
+
+    <script>
+         document.getElementById('details').innerHTML="Some Details About Raj";
+        function let(){
+        var name="Raj Vishwambhar Muley";
+        let dob=15+"-Feb-"+2000;
+        const blood="O +ve";
+        var phone=9405941894;
+        const mail="rajmuley1@gmail.com"
+        document.getElementById('name').innerHTML="Name: "+ name;  
+        document.getElementById('dob').innerHTML="Date OF Birth: "+ dob;
+        document.getElementById('bloodg').innerHTML="Blood Group: "+ blood;
+        document.getElementById('phone').innerHTML="Phone: "+ phone;
+        document.getElementById('mail').innerHTML="Mail: "+ mail;
+        }
+        </script>
+</body> 
+</html>
