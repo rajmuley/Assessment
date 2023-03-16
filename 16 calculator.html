@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>calculator n</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-decoration-break: none;
+
+        }
+        body{
+            background-color: rgba(213, 204, 204, 0.386);
+        }
+        .s{
+            max-width: 400px;
+            min-width: 200px;
+            padding: 19px;
+            box-shadow: 8px 13px red;
+            border: 10px solid rgb(0, 200, 255);
+         background-color: rgb(0, 0, 0);
+         color: white;
+            margin-top: 10%; 
+        }
+        .col{    
+            border: 0px black solid;
+            /* margin: 0.1%;         */
+            color: white;
+            font-size: 24px;
+            }
+        .disp{
+            border:rgba(0, 0, 0, 0);    
+            height: auto;
+            flex: 1;    
+            justify-content: flex-end;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            text-align: end;
+            font-size: 36px;
+            overflow-wrap: break-word;
+        }
+        .h:hover{
+        background-color: rgba(133, 166, 147, 0.501);
+        text-shadow: 2px 2px rgb(255, 0, 0);
+        }
+        h2{
+        text-align: center;
+        font-style: italic;
+}   
+
+            </style>    
+          </head>
+          <body>
+            <div class="s container-sm ">
+                <div class="row">
+                    <h2>Hey this calculator is Developed by Raj</h2>
+        <div>
+            <!-- <textarea type="input" id="dis" placeholder="0" class="w-100 disp"></textarea> -->
+            <input type="input" id="dis" placeholder="0"class="w-100 disp">
+
+        </div>
+                </div>
+            <!-- <div class="row">
+                <div class="col btn btn-outline-secondary  m-1" type="button">C</div>
+                <div class="col btn btn-outline-secondary  m-1" type="button">CE</div>
+                <div class="col btn btn-outline-secondary  m-1" type="button">C</div>
+                <div class="col btn btn-outline-secondary  m-1" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-backspace" viewBox="0 0 16 16">
+                    <path d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z"/>
+                    <path d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z"/>
+                  </svg></div>
+            </div> -->
+            <div></div>
+        <div class="row">
+            <button class="col btn btn-outline-secondary  m-1 h"  onclick="clr()" type="button">AC</button>
+            <button class="col btn btn-outline-secondary  m-1 h"  onclick="del()" type="button">C</button>
+            <button class="col btn btn-outline-secondary  m-1 h"  onclick="show('%')" type="button">%</button>
+            <button class="col btn btn-outline-secondary  m-1 h"  onclick="show('/')" type="button">/</button>
+        </div>
+        <div class="row">
+            <input class="col btn btn-outline-secondary  m-1 h" value="7" onclick="show(7)" type="button">
+            <!-- 7</button> -->
+            <button class="col btn btn-outline-secondary  m-1 h" onclick="show(8)" type="button">8</button>
+            <button class="col btn btn-outline-secondary  m-1 h" onclick="show(9)" type="button">9</button>
+            <button class="col btn btn-outline-secondary  m-1 h" onclick="show('*')" type="button">X</button>
+        </div>
+        <div class="row">
+            <button class="col btn btn-outline-secondary  m-1 h" onclick="show(4)" type="button">4</button>
+            <button class="col btn btn-outline-secondary  m-1 h" onclick="show(5)" type="button">5</button>
+            <button class="col btn btn-outline-secondary  m-1 h" onclick="show(6)" type="button">6</button>
+            <button class="col btn btn-outline-secondary  m-1 h" onclick="show('-')" type="button">-</button>
+        </div>
+        <div class="row">
+            <button class="col btn btn-outline-secondary  m-1  h" onclick="show(1)" type="button">1</button>
+            <button class="col btn btn-outline-secondary  m-1  h" onclick="show(2)" type="button">2</button>
+            <button class="col btn btn-outline-secondary  m-1  h" onclick="show(3)" type="button">3</button>
+            <button class="col btn btn-outline-secondary  m-1  h" onclick="show('+')" type="button">+</button>
+        </div>
+        <div class="row">
+            <button class="col btn btn-outline-secondary  m-1  h" onclick="show(0)" type="button">0</button>
+            <button class="col btn btn-outline-secondary  m-1  h" onclick="show(00)" type="button">00</button>
+            <button class="col btn btn-outline-secondary  m-1  h" onclick="show('.')" type="button">.</button>
+            <button class="col btn btn-outline-secondary  m-1  h" onclick="result()" type="button">=</button>
+        </div>
+            </div>
+
+<script>
+// let ans=document.getElementById("dis");
+let show=(number)=>{
+    document.getElementById("dis").value+=number
+}
+let result=()=>{
+    
+    document.getElementById("dis").value=eval(document.getElementById("dis").value);
+    
+}
+function clr() {
+    document.getElementById("dis").value= " ";
+    }
+function del() {
+    document.getElementById("dis").value=document.getElementById("dis").value.slice(0,-1);
+    }
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
