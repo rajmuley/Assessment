@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>noter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: rgba(213, 204, 204, 0.386);
+        }
+        .s{
+            max-width: 600px;
+            min-width: 200px;
+            padding: 19px;
+            border: 0px solid rgb(255, 0, 0);    
+            color: rgb(0, 0, 0);
+            /* margin-top: 1%;  */
+            background-image: url(https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000);
+            background-repeat: no-repeat;
+        }
+
+        .disp{
+            border:1px solid;    
+            height: auto;
+            flex: 1;    
+            justify-content: flex-end;
+            background-color: rgba(0, 0, 0, 0);
+            text-align: center;
+            overflow-wrap: break-word;
+            margin: 1%;
+            border: none;
+        }
+        .j{
+        text-align: center;
+        font-style: italic;
+        /* overflow: scroll; */
+
+}   
+.h{
+            text-align: center;
+            flex: 1;    
+            justify-content: flex-end;
+            background-color: rgba(0, 0, 0, 0);
+            color: rgb(255, 183, 0);
+            margin: 1%;
+        }
+table{
+    text-align: center  ;
+}
+h1{
+    text-align: center;
+}
+
+
+         </style>    
+          </head>
+          <body>
+            <div class="s container">
+                <div class="row">
+                    <h1>Note Calculator</h1>
+                    <hr>    
+                </div>
+
+        <div class="row">
+
+            <table>
+                <tr>
+                    <th>
+                        <p>Note</p>
+                    </th>
+                    <th>
+                        <p>Note Qty</p>
+                    </th>
+                    <th>
+                        <p>Amount</p>
+                    </th>
+                    </tr>
+                    <tr>
+                    <td><div class="col-12  m-1 h" id="fx"  type="button" type="">2000_X</div></td>
+                    <td><input type="input" oninput="a(),t(),tn()" maxlength="5" id="av" value="0" class="w-50 disp"></td>
+                    <td><div id="ad" class="col-12  m-1 h"></div></td>
+                    </tr>
+                    <tr>
+                    <td><div class="col-12  m-1 h" id="fx"  type="button" type="">500_X</div></td>
+                    <td><input type="input" oninput="b(),t(),tn()"maxlength="5" id="bv" value="0" class="w-50 disp"></td>
+                    <td><div id="bd" class="col-12  m-1 h"></div></td>
+                    </tr>
+                    <tr>
+                    <td><div class="col-12  m-1 h" id="fx"  type="button" type="">200_X</div></td>
+                    <td><input type="input" oninput="c(),t(),tn()" maxlength="5" id="cv" value="0" class="w-50 disp"></td>
+                    <td><div id="cd" class="col-12  m-1 h"></div></td>
+                    </tr>
+                    <tr>
+                    <td><div class="col-12  m-1 h" id="fx"  type="button" type="">100_X</div></td>
+                    <td><input type="input" oninput="d(),t(),tn()" maxlength="5" id="dv" value="0" class="w-50 disp"></td>
+                    <td><div id="dd" class="col-12  m-1 h"></div></td>
+                    </tr>
+                    <tr>
+                    <td><div class="col-12  m-1 h" id="fx"  type="button" type="">50_X</div></td>
+                    <td><input type="input" oninput="e(),t(),tn()" maxlength="5" id="ev" value="0" class="w-50 disp"></td>
+                    <td><div id="ed" class="col-12  m-1 h"></div></td>
+                    </tr>
+                    <tr>
+                    <td><div class="col-12  m-1 h" id="fx"  type="button" type="">20_X</div></td>
+                    <td><input type="input" oninput="two(),t(),tn()" maxlength="5" value="0" id="twov" class="w-50 disp"></td>
+                    <td><div id="twod" class="col-12  m-1 h"></div></td>
+                    </tr>
+                    <tr>
+                    <td><div class="col-12  m-1 h" id="fx"  type="button" type="">10_X</div></td>
+                    <td><input type="input" oninput="f(),t(),tn()" maxlength="5" id="fv" value="0"  class="w-50 disp"></td>
+                    <td><div id="fd" class="col-12  m-1 h"></div></td>
+                    </tr>
+                    <tr>
+                    <td><div class="col-12  m-1 h" id="fx"  type="button" type="">Coin_X</div></td>
+                    <td><input type="input" oninput="g(),t(),tn()" maxlength="5" id="gv"  value="0"  class="w-50 disp"></td>
+                    <td><div id="gd" class="col-12  m-1 h"></div></td>
+                    </tr>
+                    <tr>
+                    <td><div class="col-12  m-1 mt-1 j" id="fx"  type="button" type="">Total</div></td>
+                    <td><div id="tv" class="m-1 j"></div></td> 
+                    <td><div id="hd" class="col-12  m-1 j"></div></td>
+                    </tr>
+                    <!-- <button onclick="yes()">Login</button> -->
+            </table>
+            <form>
+                <button class="btn btn-primary position-relative bottom-0 end-0" onclick="re()">reset</button>
+            </form>    
+            <!-- <div class="row">
+                <div class="col"><h3>Note</h3></div>x
+                <div class="col"><h3>Note Qty</h3></div>
+                <div class="col"><h3>Amount</h3></div>
+            </div>
+            <div class="row">
+                <div class="col"><div class=" m-1 h" id="fx"  type="button" type="">2000_X</div></div>
+                <div class="col"><input type="input" oninput="a(),t(),tn()" maxlength="3" id="av" value="0" class="w-50 disp"></div>
+                <div class="col"><div id="ad" class=" m-1 h"></div></div>
+            </div>
+            <div class="row">
+                <div class="col"><div class="  m-1 h" id="fx"  type="button" type="">500_X</div></div>
+                <div class="col"><input type="input" oninput="b(),t(),tn()"maxlength="3" id="bv" value="0" class="w-50 disp"></div>
+                <div class="col"><div id="bd" class=" m-1 h"></div></div>
+            </div>
+            <div class="row">
+                <div class="col"><div class=" m-1 h" id="fx"  type="button" type="">200_X</div></div>
+                <div class="col"><input type="input" oninput="c(),t(),tn()" maxlength="3" id="cv" value="0" class="w-50 disp"></div>
+                <div class="col"><div id="bd" class="  m-1 h"></div></div>
+            </div>
+            <div class="row">
+                <div class="col"><div class=" m-1 h" id="fx"  type="button" type="">100_X</div></div>
+                <div class="col"><input type="input" oninput="d(),t(),tn()" maxlength="3" id="dv" value="0" class="w-50 disp"></div>
+                <div class="col"><div id="dd" class="  m-1 h"></div></div>
+            </div>
+            <div class="row">
+                <div class="col"><div class="  m-1 h" id="fx"  type="button" type="">100_X</div></div>
+                <div class="col"><div id="tv" class="m-1 h1"></div></div>
+                <div class="col"><div id="hd" class="  m-1 h1"></div></div>
+            </div> -->
+        </div>
+            </div>
+
+<script>
+
+function aa(){
+    return document.getElementById('av').value;
+}
+function a()
+{      
+
+    return document.getElementById('ad').innerHTML = aa() * 2000 ;
+}
+function bb(){
+    return document.getElementById('bv').value;
+}
+function b()
+{
+    return document.getElementById('bd').innerHTML = bb() * 500;
+     
+}
+function cc(){
+    return document.getElementById('cv').value;
+}
+function c()
+{
+    return document.getElementById('cd').innerHTML = cc() * 200;
+}
+function dd()
+{
+    return document.getElementById('dv').value ;
+}
+function d()
+{
+    return   document.getElementById('dd').innerHTML = dd() * 100;
+}
+function ee()
+{
+    return   document.getElementById('ev').value;
+}
+function e()
+{
+    return    document.getElementById('ed').innerHTML = ee() * 50;
+}
+function twotwo()
+{
+    return    document.getElementById('twov').value;
+}
+function two()
+{
+    return    document.getElementById('twod').innerHTML = twotwo() * 20;
+}
+function ff()
+{
+    return    document.getElementById('fv').value;
+}
+function f()
+{
+    return    document.getElementById('fd').innerHTML = ff() * 10;
+}
+function gg()
+{
+    return document.getElementById('gv').value;
+}
+function g()
+{
+    return document.getElementById('gd').innerHTML = gg()* 1 ;
+}
+function t()
+{
+   document.getElementById('hd').innerHTML= a()+b()+c()+d()+e()+f()+g()+two();
+}
+function tn() {
+    document.getElementById('tv').innerHTML= parseInt(aa())+ parseInt(bb())+parseInt(cc())+parseInt(dd())+parseInt(ee())+parseInt(ff())+parseInt(gg())+parseInt(twotwo());
+}
+
+// aa(),bb(),cc(),dd(),ee(),ff(),gg(),twotwo()
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
